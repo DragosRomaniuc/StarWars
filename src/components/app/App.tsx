@@ -9,9 +9,11 @@ import { appTheme } from 'config/style-config';
 
 const theme = createMuiTheme(appTheme);
 
-const App = (props: any) => {
+export const appTestId = 'AppComponent';
+
+export const App = (props: any) => {
   return (
-    <div className="App">
+    <div className="App"  data-testid={appTestId}>
         <MuiThemeProvider theme={theme}>
           <BrowserRouter >
             <GlobalContextProvider>

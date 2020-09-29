@@ -52,28 +52,6 @@ export const CustomList = ({
           setErrors={setErrors}
           film={film}
         />)}
-        {/* <Typography style={{ padding: 10 }} variant="h4" component="h4" color="primary">
-          Selected Range
-        </Typography>
-        <Grid container
-          justify="center"
-          alignItems="center"
-
-          item xs={12}
-          direction="row">
-
-          {selectedRange.map((date: string, index: number) =>
-            <Typography key={index} style={{ padding: 10 }} variant="h6" component="h6" >
-              {moment(date).format('YYYY-MMMM-DD')}
-            </Typography>
-          )}
-        </Grid>
-
-        {averages.map((item: AverageObject, index: number) =>
-          <Typography key={index} style={{ padding: 10 }} variant="h6" component="h6" color="secondary" >
-            Average for {item.name} : {item.average.toFixed(3)}
-          </Typography>
-        )} */}
       </Grid>
 
 

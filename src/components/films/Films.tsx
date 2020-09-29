@@ -16,21 +16,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1
   },
-  paper: {
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-  },
   container: {
     marginTop: 10
   },
-  image: {
-    position: 'absolute',
-    top: 0,
-    left: 20,
-    zIndex: -2,
-    width: 300
-  },
+
   img: {
     flex: 1,
     padding: 5,
@@ -43,8 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Films = () => {
   const classes = useStyles();
-
-  // const [films, setFilms] = useState<Film[]>([]);
+  
   const [errors, setErrors] = useState<BasicError[]>()
   const [loading, setLoading] = useState<boolean>(false)
   const [selectedFilms, setSelectedFilms] = useState<Film[]>()
@@ -74,32 +62,9 @@ export const Films = () => {
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
 
-  // const handleTextInput = async (ev: any) => {
-  //   try {
-  //     ev.preventDefault();
-  //     if (!ev.target[0].value) return;
-
-  //     let query = ev.target[0].value
-  //     let {
-  //       bestMatches
-  //     }: {
-  //       bestMatches: BestMatches[]
-  //     } = await ApiFactory.searchSymbols(query);
-
-  //     setSearchedCompany(bestMatches);
-  //   } catch (err) {
-  //     setErrors([{
-  //       message: 'Something went wrong, please try again'
-  //     }])
-  //   }
-  // }
-
   const handleAutoComplete = (newValue: Film[]) => {
     setSelectedFilms(newValue)
-    // dispatch(addFilmsAction(newValue))
   }
-
-  console.log('filllms', films)
   return (
     <div>
       <Container >
@@ -129,10 +94,7 @@ export const Films = () => {
             }
             style={{ minWidth: '50vw' }}
             renderInput={(params) => (
-              <form 
-              // onSubmit={handleTextInput}
-              
-              >
+              <form>
                 <TextField
                   {...params}
                   id="filled-basic"
