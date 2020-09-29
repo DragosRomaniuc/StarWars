@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+export const accordionsTestId = 'accordionsTestId'
+
 export const AccordionList = ({data}: {
   data: Character[]
 }) => {
@@ -34,7 +36,7 @@ export const AccordionList = ({data}: {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-testid="accordionsTestId">
      {data.map((item: Character) =>  <Accordion  onChange={handleChange(item.url)}
      style={{padding: 10}}
      >
