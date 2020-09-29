@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import App from 'components/app/App';
 
-window.renderShoreline = (containerId: string) => {
+window.renderEpam = (containerId: string) => {
   const elem = document.getElementById(containerId);
 
   if (elem) {
@@ -11,7 +11,7 @@ window.renderShoreline = (containerId: string) => {
   }
 };
 
-window.unmountShoreline = (containerId: string) => {
+window.unmountEpam = (containerId: string) => {
   const elem = document.getElementById(containerId);
   if (elem) {
     ReactDOM.unmountComponentAtNode(elem);
@@ -20,6 +20,6 @@ window.unmountShoreline = (containerId: string) => {
 
 if (!window.isRenderedByContainer) {
 
-  window.renderShoreline('root');
+  window.renderEpam('root');
 
 }
